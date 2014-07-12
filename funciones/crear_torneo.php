@@ -86,7 +86,7 @@ function makeRounds()
 	for (var i=0;i<rows;i++)
 	{
 		var numRonda = i+1;
-		document.getElementById("form_div").innerHTML += "Ronda "+numRonda+": ";
+		document.getElementById("form_div").innerHTML += "Round "+numRonda+": ";
 		for(var j=0;j<cols;j++)
 		{
 			document.getElementById("form_div").innerHTML += cuadroRondas[i][j][0];
@@ -141,7 +141,7 @@ function backToNamesInput()
 	document.getElementById("form_div").innerHTML = '';
 	for(var i=1;i<=num;i++)
 	{
-		document.getElementById("form_div").innerHTML += 'Jugador '+i+': <input type="text" id="player'+i+'" value="'+jugadores[i]+'" /><br />';
+		document.getElementById("form_div").innerHTML += 'Player '+i+': <input type="text" id="player'+i+'" value="'+jugadores[i]+'" /><br />';
 	}
 	document.getElementById("form_div").innerHTML += '<img src="../img/peon.png" onclick="printPlayers()" height="40" width="40" />';
 }
@@ -160,7 +160,7 @@ function setPlayerNames()
 		document.getElementById("form_div").innerHTML = '';
 		for(var i=1;i<=num;i++)
 		{
-			document.getElementById("form_div").innerHTML += 'Jugador '+i+': <input type="text" id="player'+i+'" /><br />';
+			document.getElementById("form_div").innerHTML += 'Player '+i+': <input type="text" id="player'+i+'" /><br />';
 		}
 	/*	if(num%2==1)
 		{
@@ -178,9 +178,9 @@ function setPlayerNames()
 <body>
 <?php include("../header.php");?>
 <div id="form_div">
-Nombre del Torneo: <input type="text" id="TournamentName" /><br />
-Cantidad de jugadores: <input type="text" id="numPlayers" /><br />
-<img src="../img/pacman.png" onClick="setPlayerNames()" height="40" width="40" />
+Tournamente name: <input type="text" id="TournamentName" /><br />
+Number of players: <input type="text" id="numPlayers" /><br />
+<button onClick="setPlayerNames()">Create</button>
 </div>
 <div id="form_div2">
 </div>

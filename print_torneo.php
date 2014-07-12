@@ -37,7 +37,7 @@ else if($rowRondas['ronda']%3==0)
 		$resultPartidas=mysql_query($sqlPartidas);
 		
 		echo '<table>';
-		echo "<th colspan='4'><h3>Ronda ".$rowRondas['ronda']."</h3></th>";
+		echo "<th colspan='4'><h3>Round ".$rowRondas['ronda']."</h3></th>";
 		
 		while($rowPartidas = mysql_fetch_array($resultPartidas))
 		{

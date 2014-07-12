@@ -19,7 +19,7 @@ $lista_emparejamientos = explode(",",$aux_datos);
 $pointer = 0;
 for($i=1;$i<=$numRounds;$i++)
 {
-	echo "Ronda ".$i.":  ";
+	echo "Round ".$i.":  ";
 	for($j=0;$j<$numTables;$j++)
 	{
 		echo $lista_emparejamientos[$pointer];

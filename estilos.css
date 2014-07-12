@@ -35,7 +35,6 @@ bottom:-16px;
 height:32px;
 list-style-type:none;
 padding:0;
-overflow:hidden;
 }
 
 li.menuItem
@@ -45,7 +44,6 @@ float:left;
 
 a.menuItem:link, a.menuItem:visited
 {
-display:block;
 width:120px;
 font-weight:bold;
 color:#FFFFFF;
@@ -54,6 +52,7 @@ text-align:center;
 padding:4px;
 text-decoration:none;
 text-transform:uppercase;
+border: 2px solid green;
 }
 
 a.menuItem:hover,a.menuItem:active

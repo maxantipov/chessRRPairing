@@ -18,19 +18,19 @@ else
 		<td>
 		<table width="100%" border="0" cellpadding="3" cellspacing="1">
 		<tr>
-		<td width="78">Usuario</td>
+		<td width="78">Username</td>
 		<td width="6">:</td>
 		<td width="294"><input name="myusername" type="text" id="myusername"></td>
 		</tr>
 		<tr>
-		<td>Contrase�a</td>
+		<td>Password</td>
 		<td>:</td>
 		<td><input name="mypassword" type="password" id="mypassword"></td>
 		</tr>
 		<tr>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td><input type="submit" name="Submit" value="Entrar"></td>
+		<td><input type="submit" name="Submit" value="Log In"></td>
+		<td><a href="register.php">Register</td>
 		</tr>
 		</table>
 		</td>
@@ -46,8 +46,8 @@ echo '
 	<ul class="mainMenu">
 	
 	
-	<li class="menuItem"><a href="torneos.php" class="menuItem">Ver torneos</a></li>
-	<li class="menuItem"><a href="funciones/crear_torneo.php" class="menuItem">CREAR TORNEO</a></li>
+	<li class="menuItem"><a href="torneos.php" class="menuItem">My tournaments</a></li>
+	<li class="menuItem"><a href="funciones/crear_torneo.php" class="menuItem">New Tournament</a></li>
 	
 	</ul>
 </div>';

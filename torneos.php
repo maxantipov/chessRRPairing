@@ -33,14 +33,14 @@ while($row = mysql_fetch_array($result))
   {
   echo '<option value="'.$row['torneo'].'">'.$row['torneo'].'</option>';
   }
-echo '</select><input type="submit" value="Ver Torneo" /></form>';
+echo '</select><input type="submit" value="Go to Tournament" /></form>';
 
 //boton version impimir
 if(isset($_GET['torneo']))
 {
 	echo '<form action="print_torneo.php" method="GET">';
 	echo '<input type="hidden" name="torneo" value="'.$_GET['torneo'].'"/>
-			<input type="submit" value="Versión para imprimir"></form>';
+			<input type="submit" value="Print Version"></form>';
 }
 ?>
 </div>
@@ -64,7 +64,7 @@ echo '<div class="tournament">';
 		$resultPartidas=mysql_query($sqlPartidas);
 		
 		echo '<table>';
-		echo "<th colspan='4'><h3>Ronda ".$rowRondas['ronda']."</h3></th>";
+		echo "<th colspan='4'><h3>Round ".$rowRondas['ronda']."</h3></th>";
 		
 		while($rowPartidas = mysql_fetch_array($resultPartidas))
 		{
@@ -91,7 +91,7 @@ echo '<div class="tournament">';
 			}
 		}//while partidas en la ronda
 		echo '</table>';
-		if(comprobarPermiso(2)) echo '<input type="submit" value="Introducir Resultados"/></form><br/>';
+		if(comprobarPermiso(2)) echo '<input type="submit" value="Save Results"/></form><br/>';
 		echo '<br/><br/>';
 	}//while rondas
 	echo '</div>';
@@ -159,8 +159,8 @@ for($i=0;$i<count($jugadores);$i++)
 usort($masterArray, "compara");
 
 
-echo '<table class="standings"><caption>CLASIFICACIÓN</caption>';
-echo '<tr><th>Pos</th><th>Jugador/a</th><th>Puntos</th></tr>';
+echo '<table class="standings"><caption>STANDINGS</caption>';
+echo '<tr><th>Pos</th><th>JPlayer</th><th>Points</th></tr>';
 for($i=0;$i<count($jugadores);$i++)
 {
 //	echo $masterArray[$i][1]." -> ".$masterArray[$i][0]."</br>";
